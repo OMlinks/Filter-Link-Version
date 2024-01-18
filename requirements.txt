@@ -1,6 +1,6 @@
 git+https://github.com/MKN-BOTZ/pyrogram
 tgcrypto
-pymongo[srv]
+pymongo==4.4.1
 motor
 marshmallow
 umongo
