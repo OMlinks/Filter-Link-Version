@@ -52,13 +52,12 @@ async def start(client, message):
         ]]
         m = await message.reply_sticker("CAACAgUAAxkBAAJiUmVi666k3_bH32y0_CgDrvWoqmgoAAJ7BAACpxnRVy7b1I6i_1WsMwQ") 
     await asyncio.sleep(3)
-    await m.delete()
     await message.reply_photo('https://telegra.ph/file/8bd53d46f46a3acdb0e17.jpg', 
         caption=START_TXT,
         reply_markup=InlineKeyboardMarkup(button),
         quote=True
     )
-    return
+    return await m.delete()
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
