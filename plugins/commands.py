@@ -53,17 +53,13 @@ async def start(client, message):
                 ],[
                     InlineKeyboardButton('🍀 Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟs 🍀', callback_data="chnl_info")
                   ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgUAAxkBAAJiVGVi67X3-k_Jmpl_Vn8LAsCEee49AALwBAAC0zvRV6GPpPtRmRhrMwQ")
-        await asyncio.sleep(1)
-        await m.delete()         
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+        reply_markup=InlineKeyboardMarkup(buttons)
+        await bot.send_message(
+            chat_id=chat,
+            text='<b>Hello Friends, \nMy admin has told me to leave from group, so i go! If you wanna add me again contact my Support Group or My Owner</b>',
             reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
         )
-        return
+        
     
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
@@ -105,14 +101,12 @@ async def start(client, message):
                 ],[
                     InlineKeyboardButton('🍀 Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟs 🍀', callback_data="chnl_info")
                   ]]
-        reply_markup = InlineKeyboardMarkup(buttons)                    
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+        reply_markup=InlineKeyboardMarkup(buttons)
+        await bot.send_message(
+            chat_id=chat,
+            text='<b>Hello Friends, \nMy admin has told me to leave from group, so i go! If you wanna add me again contact my Support Group or My Owner</b>',
             reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
         )
-        return
     data = message.command[1]
     try:
         pre, file_id = data.split('_', 1)
