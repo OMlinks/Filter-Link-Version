@@ -6,6 +6,7 @@ from Script import script
 from pyrogram import Client, filters, enums
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import *
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db
 from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, SUPPORT_CHAT, MAX_B_TN, VERIFY, SHORTLINK_API, SHORTLINK_URL, TUTORIAL, IS_TUTORIAL, PREMIUM_USER
@@ -51,12 +52,13 @@ async def start(client, message):
         ]]
         m = await message.reply_sticker("CAACAgUAAxkBAAJiUmVi666k3_bH32y0_CgDrvWoqmgoAAJ7BAACpxnRVy7b1I6i_1WsMwQ") 
     await asyncio.sleep(3)
+    await m.delete()
     await message.reply_photo('https://telegra.ph/file/8bd53d46f46a3acdb0e17.jpg', 
         caption=START_TXT,
         reply_markup=InlineKeyboardMarkup(button),
         quote=True
     )
-    return await m.delete()
+    return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
