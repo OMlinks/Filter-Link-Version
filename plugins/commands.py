@@ -52,7 +52,7 @@ async def start(client, message):
         m=await message.reply_sticker("CAACAgUAAxkBAAJiRGVi64FXNzA8abBQbnUMsR3dXO6yAAKHCgACAxyQVI98YifnH1rfMwQ") 
         await asyncio.sleep(1)
         await m.delete()
-        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, reply_markup = InlineKeyboardMarkup(buttons), parse_mode=enums.ParseMode.HTML)
+        await message.reply_photo(photo=random.choice(PICS), caption=START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, reply_markup = InlineKeyboardMarkup(buttons), parse_mode=enums.ParseMode.HTML)
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
