@@ -53,10 +53,17 @@ async def start(client, message):
                 ],[
                     InlineKeyboardButton('🍀 Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟs 🍀', callback_data="chnl_info")
                   ]]
-        reply_markup=InlineKeyboardMarkup(buttons)
-        await bot.send_message(text='<b>Hello Friends, \nMy admin has told me to leave from group, so i go! If you wanna add me again contact my Support Group or My Owner</b>',
+        reply_markup = InlineKeyboardMarkup(buttons)
+        m=await message.reply_sticker("CAACAgUAAxkBAAJiRGVi64FXNzA8abBQbnUMsR3dXO6yAAKHCgACAxyQVI98YifnH1rfMwQ")
+        await asyncio.sleep(1)
+        await m.delete()         
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.START_MESSAGE.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
         )
+        return
        
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
@@ -98,10 +105,17 @@ async def start(client, message):
                 ],[
                     InlineKeyboardButton('🍀 Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟs 🍀', callback_data="chnl_info")
                   ]]
-        reply_markup=InlineKeyboardMarkup(buttons)
-        await bot.send_message(text='<b>Hello Friends, \nMy admin has told me to leave from group, so i go! If you wanna add me again contact my Support Group or My Owner</b>',
+        reply_markup = InlineKeyboardMarkup(buttons)
+        m=await message.reply_sticker("CAACAgUAAxkBAAJiRGVi64FXNzA8abBQbnUMsR3dXO6yAAKHCgACAxyQVI98YifnH1rfMwQ")
+        await asyncio.sleep(1)
+        await m.delete()         
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.START_MESSAGE.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
         )
+        return
     data = message.command[1]
     try:
         pre, file_id = data.split('_', 1)
