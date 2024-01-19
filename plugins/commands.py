@@ -49,17 +49,14 @@ async def start(client, message):
             ],[
             InlineKeyboardButton("🎭 ɢʀᴏᴜᴩ 🎭", url="https://t.me/+rxBzvfTcvnIwYmM1")
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgUAAxkBAAJiRGVi64FXNzA8abBQbnUMsR3dXO6yAAKHCgACAxyQVI98YifnH1rfMwQ") 
-        await asyncio.sleep(3)
-        await m.delete()
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-        return
+        m = await message.reply_sticker("CAACAgUAAxkBAAJiUmVi666k3_bH32y0_CgDrvWoqmgoAAJ7BAACpxnRVy7b1I6i_1WsMwQ") 
+    await asyncio.sleep(3)
+    await message.reply_photo('https://telegra.ph/file/8bd53d46f46a3acdb0e17.jpg', 
+        caption=START_TXT,
+        reply_markup=InlineKeyboardMarkup(button),
+        quote=True
+    )
+    return await m.delete()
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
