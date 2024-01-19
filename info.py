@@ -21,6 +21,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
+STICKERS = (environ.get('STICKERS', 'CAACAgUAAxkBAAJiRGVi64FXNzA8abBQbnUMsR3dXO6yAAKHCgACAxyQVI98YifnH1rfMwQ CAACAgUAAxkBAAJiQmVi63oqNHXgXILTpnXPDkFriibCAAIOCQAClL2QVMisrObArvtEMwQ CAACAgUAAxkBAAJiRmVi64fYs1cMhv4Xr4u7HyzAGLDLAAKACAAC1OWQVBGxNHYG1axlMwQ CAACAgUAAxkBAAJiTmVi66KsgNVaRgIxP2TmopidqiVIAAJpCQACwO_QV7gqbvMVefAUMwQ CAACAgUAAxkBAAJiUmVi666k3_bH32y0_CgDrvWoqmgoAAJ7BAACpxnRVy7b1I6i_1WsMwQ CAACAgUAAxkBAAJiVGVi67X3-k_Jmpl_Vn8LAsCEee49AALwBAAC0zvRV6GPpPtRmRhrMwQ CAACAgQAAxkBAAJiWmVi68fNIVGvC04ljD3tkk8t2dqtAAKrCwACJUBxUlYv3GuwTJu7MwQ CAACAgQAAxkBAAJiYGVi69eJio0kvupWcE-n1iuAhczSAALeFgACvjGBUMby0vcOWPuJMwQ CAACAgQAAxkBAAJiYmVi6-CiR8l9tUDbWGp4zZ1cgqZqAALQDAACUA0QUgxlqtqPsAfqMwQ CAACAgQAAxkBAAJiXmVi69HG1WWzC6KK6roE9pkXBKGUAAJuCgAC5hMAAVCfNZKFIAMQqjME CAACAgUAAxkBAAJiQGVi63BePoW7vqzd6tqnp6ow5cfxAAIIBwACZ2mYVFHo6VyH13xHMwQ')).split()
 PICS = (environ.get('PICS', 'https://graph.org/file/6275d4878be820ca59d67.jpg https://graph.org/file/e384beea66e2aded7e1f1.jpg https://graph.org/file/962224a28e76a415bc515.jpg https://graph.org/file/a0382582457e34f59c731.jpg https://graph.org/file/1b3202dca8454b893f7f8.jpg https://graph.org/file/4e8173128738cf10df2f2.jpg https://telegra.ph/file/bc6aadacb42fb633d3e63.jpg')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/4f2630c67bf86601c7035.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/ad2bf871f05138e234182.mp4")
