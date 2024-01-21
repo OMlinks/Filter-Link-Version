@@ -1368,15 +1368,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url="https://t.me/+rxBzvfTcvnIwYmM1")
-                ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
-                ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url="https://t.me/OM_links")
-                  ]]
+            InlineKeyboardButton("⚚ + ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ + ⚚", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            ],[     
+            InlineKeyboardButton("ʜᴇʟᴩ", callback_data="help"),
+            InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about")
+            ],[
+            InlineKeyboardButton("🔍 ꜱᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat='')
+            ],[
+            InlineKeyboardButton("🎭 ɢʀᴏᴜᴩ 🎭", url="https://t.me/+KRA74ZE4GZ84N2Q1")
+        ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
