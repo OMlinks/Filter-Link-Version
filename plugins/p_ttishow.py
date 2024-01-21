@@ -23,7 +23,7 @@ async def save_group(bot, message):
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
-                InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+                InlineKeyboardButton('🎭 Cʜᴀɴɴᴇʟ 🎭', url="https://t.me/OM_links")
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
@@ -37,12 +37,15 @@ async def save_group(bot, message):
                 pass
             await bot.leave_chat(message.chat.id)
             return
-        buttons = [[
-                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                 ],[
-                    InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/creatorrio")
-                  ]]
+        buttons = [[  
+            InlineKeyboardButton("⚚ + ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ + ⚚", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            ],[
+            InlineKeyboardButton('💎 HΞLᎮ 💎', url=f"https://t.me/{temp.U_NAME}?start=help")
+            ],[
+            InlineKeyboardButton('🎭 Cʜᴀɴɴᴇʟ 🎭', url="https://t.me/OM_links")
+            ],[
+            InlineKeyboardButton("🎭 ɢʀᴏᴜᴩ 🎭", url="https://t.me/+KRA74ZE4GZ84N2Q1")
+        ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
             text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
@@ -60,12 +63,15 @@ async def save_group(bot, message):
                                                  video=(MELCOW_VID),
                                                  caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
                                                  reply_markup=InlineKeyboardMarkup(
-                                                                         [[
-                                                                           InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                                                                           InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                                                                        ],[
-                                                                           InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/creatorrio")
-                                                                         ]]
+                                                                         [[  
+            InlineKeyboardButton("⚚ + ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ + ⚚", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            ],[
+            InlineKeyboardButton('💎 HΞLᎮ 💎', url=f"https://t.me/{temp.U_NAME}?start=help")
+            ],[
+            InlineKeyboardButton('🎭 Cʜᴀɴɴᴇʟ 🎭', url="https://t.me/OM_links")
+            ],[
+            InlineKeyboardButton("🎭 ɢʀᴏᴜᴩ 🎭", url="https://t.me/+KRA74ZE4GZ84N2Q1")
+        ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
                 )
@@ -88,11 +94,14 @@ async def leave_a_chat(bot, message):
     except:
         chat = chat
     try:
-        buttons = [[
-            InlineKeyboardButton('Support Group', url="https://t.me/rionetworksupport"),
-            InlineKeyboardButton('Owner', url="https://t.me/creatorrio")
-        ],[
-            InlineKeyboardButton('Use Me Here', url=f'https://t.me/{SUPPORT_CHAT}')
+        buttons = [[  
+            InlineKeyboardButton("⚚ + ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ + ⚚", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            ],[
+            InlineKeyboardButton('💎 HΞLᎮ 💎', url=f"https://t.me/{temp.U_NAME}?start=help")
+            ],[
+            InlineKeyboardButton('🎭 Cʜᴀɴɴᴇʟ 🎭', url="https://t.me/OM_links")
+            ],[
+            InlineKeyboardButton("🎭 ɢʀᴏᴜᴩ 🎭", url="https://t.me/+KRA74ZE4GZ84N2Q1")
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -131,7 +140,7 @@ async def disable_chat(bot, message):
     await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('🎭 Cʜᴀɴɴᴇʟ 🎭', url="https://t.me/OM_links")
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
